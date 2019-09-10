@@ -1,0 +1,53 @@
+extends layout.pug
+
+block content
+    // Start Page Content
+    input#storenum(type="text" hidden="true" value=storenum)
+    .row
+        .col-md-12
+            .card.card-outline-primary
+                .card-header
+                    h4.m-b-0.text-white Visit Store By Entering Dates Below
+                .card-body
+                    .row.justify-content-md-center
+                        .col-md-6
+                            form(action="#")
+                                .form-body
+                                    .row.p-t-20
+                                        .col-md-5
+                                            label.control-label Start Date
+                                            input#start.form-control(type="text", placeholder="30-09-2018")
+                                        .col-md-5
+                                            label.control-label End Date
+                                            input#end.form-control(type="text", placeholder="30-09-2018")
+                                        .col-md-2
+                                            label.control-label &nbsp;
+                                            button.form-control.btn.btn-success.m-b-10.m-1-5(id="submit" type="button") Submit
+    
+    each basket in baskets
+        .row
+            .col-md-12
+                .card.card-outline-success
+                    .card-header
+                        h4.m-b-0.text-white #{basket.name}
+                    .card-body
+                        .row
+                            div.grid#grid_layout
+                    .row
+                        .col-md-4
+                            .card
+                                .card-body
+                                    h4.card-title Battery Status: #{basket.stat.percent}% | Voltage : #{basket.stat.voltage}
+                                    .progress
+                                        div.progress-bar.bg-danger.wow.animated.progress-animated(role="progressbar" style="width: "+basket.stat.percent+"%; height:8px;") 
+                                            span.sr-only #{basket.stat.percent}% Complete
+                        .col-md-4
+                            .card
+                                .card-body
+                                    h4.card-title Last Checked In: #{basket.stat.last_check}             
+                        .col-md-4
+                            .card
+                                .card-body
+                                    h4.card-title Status : #{basket.stat.online}               
+
+                        
