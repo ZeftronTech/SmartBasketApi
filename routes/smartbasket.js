@@ -5,7 +5,10 @@ var path = require('path');
 const aws = require('aws-sdk');
 var fs = require('fs');
 var dateFormat = require('dateformat');
-var s3 = new aws.S3();
+let s3 = new aws.S3({
+    accessKeyId: process.env.accessKeyId,
+    secretAccessKey: process.env.secretAccessKey
+  });
 var settings = require('../settings');
 var myBucket = require('../settings').s3.bucket;
 var s3_url = require('../settings').s3.url;
