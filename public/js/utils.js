@@ -4,7 +4,7 @@ var api = {
         host: 'http://localhost:3000',
     },
     online: {
-        host: 'http://smart-basket-api.herokuapp.com'
+        host: 'http://smartbasketapi.herokuapp.com'
     }
 }
 
