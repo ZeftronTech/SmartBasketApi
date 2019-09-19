@@ -9,8 +9,8 @@ var settings = {
         }
     },
     s3 : {
-        bucket: "smart-basket-itcus",
-        url: "https://smart-basket-itcus.s3.amazonaws.com/"
+        bucket: "smart-basket",
+        url: "https://smart-basket.s3.amazonaws.com/"
     },
     mail : {
          service: 'gmail',
@@ -21,7 +21,6 @@ var settings = {
             from: 'azizahtas@gmail.com',
             to: [
                 'sashi7582@gmail.com',
-                'abhishek.solapurkar@itconnectus.com',
                 'alerts@mysmartshelf.com',
                 'azizahtas@gmail.com'
             ]
