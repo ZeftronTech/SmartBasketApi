@@ -20,7 +20,7 @@
     "multer-s3": "^2.7.0",
     "pg": "^7.4.1",
     "pg-format": "^1.0.4",
-    "pug": "2.0.0-beta11",
+    "pug": "3.0.1",
     "pug-mailer": "^1.0.1",
     "rimraf": "^2.6.2",
     "s3-image-uploader": "^1.0.7"
